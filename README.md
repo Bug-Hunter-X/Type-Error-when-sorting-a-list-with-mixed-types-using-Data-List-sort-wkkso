@@ -1,0 +1,5 @@
+# Haskell Sorting Bug: Mixed Type List
+
+This repository demonstrates a common error in Haskell when using the `sort` function from `Data.List` on a list containing elements of different types. The `sort` function requires that all elements in the list are instances of the `Ord` typeclass (meaning they can be ordered).  Mixing types like integers and strings will cause a compile-time type error because Haskell cannot determine a consistent way to order elements of different types.
+
+The `bug.hs` file contains the erroneous code, which attempts to sort a list containing both integers and strings.  The `bugSolution.hs` demonstrates the correct approach, showing how to handle lists with mixed types by either using separate sorting functions for each type or converting the list to a uniform type before sorting.
